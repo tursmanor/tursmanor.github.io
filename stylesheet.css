@@ -2,15 +2,20 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #fffff0;
 }
 
-h1, h2, h3, h4, h5{
-  font-family: "Helvetica", sans-serif;
-  color:#413839;
-}
-
+h1,
+h2,
+h3,
+h4,
 h5 {
-  font-size: 15px;
+  font-family: "Helvetica", sans-serif;
+  color: #1f1c1c;
+}
+
+h3 {
+  font-size: 18px;
   margin-bottom: 8px;
   margin-top: 8px;
 }
@@ -18,19 +23,29 @@ h5 {
 p {
   font-family: "Sans-serif", sans-serif;
   line-height: 1.5em;
-  color:#413839;
+  color: #1f1c1c;
 }
 
 a {
-  color:#009ed6;
+  color: #440f3b;
 }
 
 a:hover {
-  color:#f6c56b;
+  color: #44c0f1;
 }
 
-a:visited{
-  color: #32a8af;
+a:visited {
+  color: #740769;
+}
+
+li::marker {
+content: "\02B29 ";
+  font-size: 1.5em;
+}
+
+li {
+  padding-left: 8px;
+  margin-bottom: 8px;
 }
 
 .section {
@@ -38,19 +53,44 @@ a:visited{
 }
 
 #container {
-  display: flex;
-  flex-direction: row;
   margin: 4em;
+  max-width: 900px;
 }
 
 #sidebar {
   width: 250px;
   margin-right: 3em;
-  margin-bottom: 3em;
 }
 
 #header {
-  /* */
+  display: flex;
+  flex-direction: row;
+
+  h1 {
+    font-size: 38px;
+    margin-top: 0px;
+  }
+
+  p#pitch {
+    font-size: 20px;
+    color: #000000;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+#toc {
+  margin-top: 16px;
+  margin-bottom: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  a {
+    font-size: 26px;
+  }
 }
 
 #contact {
@@ -58,16 +98,16 @@ a:visited{
 }
 
 #sidebar img {
-  width: 100%;
+  width: 250px;
 }
 
 #content {
-  max-width: 800px;
+  
 }
 
-@media only screen and (max-width: 700px) {
-  #container {
-    flex-direction: column;
+@media only screen and (max-width: 760px) {
+  #sidebar {
+    display: none;
   }
 }
 
